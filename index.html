@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="max-width:680px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0 auto;">
+        <div style="width: 100%; padding: 10px; background-color: #414141; display: flex; justify-content: space-around; padding-left:10px; padding-right: 10px; border-radius: 8px;">
+            <a href="https://rostriks.ua/" title="rostriks.ua">
+                <img alt="{store_name}" src="https://rostriks.ua/image/catalog/design/rostriks_logo_white.png"
+                    style="border:none; max-width: 200px;">
+            </a>
+            <a href="https://www.google.com/search?q=%D1%80%D0%BE%D1%81%D1%82%D1%80%D1%96%D0%BA%D1%81+%D1%83%D0%B6%D0%B3%D0%BE%D1%80%D0%BE%D0%B4&oq=%D1%80%D0%BE%D1%81%D1%82%D1%80%D1%96%D0%BA%D1%81+%D1%83%D0%B6&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigAdIBCDUwNzVqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8#lrd=0x473919000d4e1d7f:0xd14840e00e635dd1,3,,,," style="align-self: center; cursor: pointer; background-color: #13bf6d; padding: 10px; border-radius: 8px; text-decoration: none;">
+                <span style="font-size: 16px; color: #fff; font-weight: 600;">Залишити відгук</span>
+            </a>
+        </div>
+        <h1 style="font-size: 24px; text-align: center;">{shipping_firstname}, дякуємо за ваше замовлення!</h1>
+            <h4 style="font-size: 14px; text-align: center;">Ваша заявка №
+                {order_id} прийнята. Ми надішлемо інформаційне повідомлення у Viber чи Telegram. Ви можете відстежити статус свого замовлення в <a style="color: #3e77aa;" href="https://rostriks.ua/ua/my-account/">Особистому кабінеті</a></h4>
+                <img style="width: 100%; height: 130px; object-fit: contain;" src="https://b2b.rostriks.ua/imghost/status/status-3.jpg" alt="img">
+        <table cellspacing="0"
+            style="border-collapse:collapse;border-left:1px solid #414141;border-top:1px solid #414141;margin-bottom:20px;width:100%;">
+            <thead>
+                <tr>
+                    <td colspan="2"
+                        style="background-color: #414141; text-align:center; color: white; font-weight: 700;">
+                       Інформація про замовлення</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">
+                        <strong>Замовлення №:</strong> {order_id}<br><strong>Дата додавання:</strong>
+                        {date_added}<br><strong>Спосіб оплати:</strong> {payment_method}<br><strong>Спосіб
+                            доставки:</strong> {shipping_method}</td>
+                    <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">
+                        <strong>E-mail:</strong> {email}<br><strong>Телефон:</strong> {telephone}<br><strong>IP
+                            адреса:</strong> {ip}<br><strong>Статус замовлення:</strong> {order_status}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table cellspacing="0"
+            style="border-collapse:collapse;border-left:1px solid #414141;border-top:1px solid #414141;margin-bottom:20px;width:100%">
+            <thead>
+                <tr>
+                    <td
+                        style="background-color: #414141; text-align:center; color: white; font-weight: 700;">
+                        Коментар до замовлення</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">{comment}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table cellspacing="0"
+            style="border-collapse:collapse;border-left:1px solid #414141;border-top:1px solid #414141;margin-bottom:20px;width:100%">
+            <thead>
+                <tr>
+                    <td
+                        style="background-color: #414141;border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:center; color: white; font-weight: 700;">
+                        Адреса для оплати</td>
+                    <td
+                        style="background-color: #414141;border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:center; color: white; font-weight: 700;">
+                        Адреса доставки</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">
+                        {payment_country}<br>{payment_zone}<br>{payment_city}<br>{payment_postcode},
+                        {payment_address_1}<br>{payment_address_2}</td>
+                    <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">
+                        {shipping_country}<br>{shipping_zone}<br>{shipping_city}<br>{shipping_postcode},
+                        {shipping_address_1}<br>{shipping_address_2}</td>
+                </tr>
+            </tbody>
+        </table>
+        {products}
+        <div style="width: 100%; height: 50px; background-color: #1aaf6e; border-radius: 8px; display: flex; justify-content: space-between; padding-left: 10px; padding-right: 10px;">
+            <h3 style="text-align: center; padding: 0; margin:0; align-self: center; color: #fff;">Наші соціальні мережі :</h3>
+            <ul style="display: flex; justify-content: space-around; align-self: center;"> 
+                <li style="list-style: none; width: 40px; padding: 10px;"><a style="text-decoration: none; width: 100%;" href="https://www.instagram.com/rostriks.ua">
+                    <img style="width:100%; object-fit: contain;" src="https://b2b.rostriks.ua/image/cache/catalog/icon/icon-instagram--100x100.png" alt="Instagram icon"></a>
+                </li>
+
+                <li style="list-style: none; width: 40px; max-height: 30px; padding: 10px;"><a style="text-decoration: none;" href="https://t.me/rostriks">
+                    <img style="width:100%; object-fit: contain;" src="https://b2b.rostriks.ua/image/cache/catalog/icon/icons-telegram--100x100.png" alt="Instagram icon"></a>
+                </li>
+                
+                <li style="list-style: none; width: 40px; max-height: 30px; padding: 10px;"><a style="text-decoration: none;" href="viber://chat?number=+380631092225">
+                    <img style="width:100%; object-fit: contain;" src="https://b2b.rostriks.ua/image/cache/catalog/icon/icon-viber-100x100.png" alt="Instagram icon"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+
+</html>
