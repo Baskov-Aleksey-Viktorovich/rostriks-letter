@@ -7,107 +7,322 @@
     <title>Document</title>
 </head>
 
-<body>
-    <div style="max-width:680px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0 auto;">
-        <div style="width: 100%; padding: 10px; background-color: #414141; display: flex; justify-content: space-around; padding-left:10px; padding-right: 10px; border-radius: 8px;">
-            <a href="https://rostriks.ua/" title="rostriks.ua">
-                <img alt="{store_name}" src="https://rostriks.ua/image/catalog/design/rostriks_logo_white.png"
-                    style="border:none; max-width: 200px;">
-            </a>
-            <a href="https://www.google.com/search?q=%D1%80%D0%BE%D1%81%D1%82%D1%80%D1%96%D0%BA%D1%81+%D1%83%D0%B6%D0%B3%D0%BE%D1%80%D0%BE%D0%B4&oq=%D1%80%D0%BE%D1%81%D1%82%D1%80%D1%96%D0%BA%D1%81+%D1%83%D0%B6&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigAdIBCDUwNzVqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8#lrd=0x473919000d4e1d7f:0xd14840e00e635dd1,3,,,," style="align-self: center; cursor: pointer; background-color: #13bf6d; padding: 10px; border-radius: 8px; text-decoration: none;">
-                <img style="width: 20px;" src="https://media.tenor.com/DloYoakaD_UAAAAi/backhand-index-pointing-right-joypixels.gif" alt="google-gif">
-                <span style="font-size: 16px; color: #fff; font-weight: 600;">Залишити відгук</span>
-            </a>
-        </div>
-        <h1 style="font-size: 24px; text-align: center;">{shipping_firstname}, дякуємо за ваше замовлення!</h1>
-            <h4 style="font-size: 14px; text-align: center;">Ваша заявка №
-                {order_id} прийнята. Ми надішлемо інформаційне повідомлення у Viber чи Telegram. Ви можете відстежити статус свого замовлення в <a style="color: #3e77aa;" href="https://rostriks.ua/ua/my-account/">Особистому кабінеті</a></h4>
-                <img style="width: 100%; height: 130px; object-fit: contain;" src="https://b2b.rostriks.ua/imghost/status/status-3.jpg" alt="img">
-        <table cellspacing="0"
-            style="border-collapse:collapse;border-left:1px solid #414141;border-top:1px solid #414141;margin-bottom:20px;width:100%;">
-            <thead>
-                <tr>
-                    <td colspan="2"
-                        style="background-color: #414141; text-align:center; color: white; font-weight: 700;">
-                       Інформація про замовлення</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">
-                        <strong>Замовлення №:</strong> {order_id}<br><strong>Дата додавання:</strong>
-                        {date_added}<br><strong>Спосіб оплати:</strong> {payment_method}<br><strong>Спосіб
-                            доставки:</strong> {shipping_method}</td>
-                    <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">
-                        <strong>E-mail:</strong> {email}<br><strong>Телефон:</strong> {telephone}<br><strong>IP
-                            адреса:</strong> {ip}<br><strong>Статус замовлення:</strong> {order_status}</td>
-                </tr>
-            </tbody>
-        </table>
-        <table cellspacing="0"
-            style="border-collapse:collapse;border-left:1px solid #414141;border-top:1px solid #414141;margin-bottom:20px;width:100%">
-            <thead>
-                <tr>
-                    <td
-                        style="background-color: #414141; text-align:center; color: white; font-weight: 700;">
-                        Коментар до замовлення</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">{comment}</td>
-                </tr>
-            </tbody>
-        </table>
-        <table cellspacing="0"
-            style="border-collapse:collapse;border-left:1px solid #414141;border-top:1px solid #414141;margin-bottom:20px;width:100%">
-            <thead>
-                <tr>
-                    <td
-                        style="background-color: #414141;border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:center; color: white; font-weight: 700;">
-                        Адреса для оплати</td>
-                    <td
-                        style="background-color: #414141;border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:center; color: white; font-weight: 700;">
-                        Адреса доставки</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">
-                        {payment_country}<br>{payment_zone}<br>{payment_city}<br>{payment_postcode},
-                        {payment_address_1}<br>{payment_address_2}</td>
-                    <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">
-                        {shipping_country}<br>{shipping_zone}<br>{shipping_city}<br>{shipping_postcode},
-                        {shipping_address_1}<br>{shipping_address_2}</td>
-                </tr>
-            </tbody>
-        </table>
-        {products}
-        <div style="width: 100%; background-color:#fcf4db; height: 50px; display: flex; gap: 20px; margin-bottom: 20px; border-radius: 8px; padding: 10px;">
-            <img style="max-width: 50px;" src="https://b2b.rostriks.ua/imghost/status/exclamation-marks-4787_256.gif" alt="what">
-            <div style="display: flex; flex-direction: column;">
-                <strong>Виникли додаткові запитання?</strong>
-                <span>Звертайтеся до нашого <a style="color: #3e77aa; font-weight: 700;" href="viber://chat?number=+380631092225">СУПЕР-МЕНЕДЖЕРА</a></span>
-            </div>
-        </div>
-        <div style="width: 100%; height: 50px; background-color: #1aaf6e; border-radius: 8px; display: flex; justify-content: space-between; padding-left: 10px; padding-right: 10px;">
-            <h3 style="text-align: center; padding: 0; margin:0; align-self: center; color: #fff;">Наші соціальні мережі :</h3>
-            <ul style="display: flex; justify-content: space-around; align-self: center;"> 
-                <li style="list-style: none; width: 40px; padding: 10px;"><a style="text-decoration: none; width: 100%;" href="https://www.instagram.com/rostriks.ua">
-                    <img style="width:100%; object-fit: contain;" src="https://b2b.rostriks.ua/image/cache/catalog/icon/icon-instagram--100x100.png" alt="Instagram icon"></a>
-                </li>
+<body style="margin:0;padding:0;min-width:100%;background-color:#EEEEEE; font-family: Arial Narrow, Arial, Helvetica, sans-serif; font-size: 16px;color:#333333;">
+    <center style="width: 100%;table-layout:fixed;background-color: #EEEEEE;padding-top: 20px;padding-bottom: 20px;">
+        <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="color:#333333;font-family: Arial Narrow, Helvetica, sans-serif;background-color: #EEEEEE;Margin:0;width: 100%;" class="mobile-padding">
 
-                <li style="list-style: none; width: 40px; max-height: 30px; padding: 10px;"><a style="text-decoration: none;" href="https://t.me/rostriks">
-                    <img style="width:100%; object-fit: contain;" src="https://b2b.rostriks.ua/image/cache/catalog/icon/icons-telegram--100x100.png" alt="Instagram icon"></a>
-                </li>
-                
-                <li style="list-style: none; width: 40px; max-height: 30px; padding: 10px;"><a style="text-decoration: none;" href="viber://chat?number=+380631092225">
-                    <img style="width:100%; object-fit: contain;" src="https://b2b.rostriks.ua/image/cache/catalog/icon/icon-viber-100x100.png" alt="Instagram icon"></a>
-                </li>
-            </ul>
-        </div>
-    </div>
+            <!-- header -->
+            <tbody><tr>
+              <td>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%; ">
+                  <tbody><tr>
+                    <td style="background-color: #414141; ">
+                      <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
+                        <tbody><tr>
+                          <td style="padding: 42px 20px 47px 20px;">
+                            <a href="https://rostriks.ua/ua" target="_blank" title="logo" rel="noopener noreferrer">
+                              <img src="https://rostriks.ua/image/catalog/design/rostriks_logo_white.png" alt="logo image" border="0" width="200" height="40">
+                            </a>
+                          </td>
+                          
+                        </tr>
+                      </tbody></table>
+                    </td>
+                  </tr>
+                  <!-- decor background -->
+                  <tr>
+                    <td style="background-color: #414141; height: 265px;">
+                    </td>
+                  </tr>
+                  <!-- end decor background -->
+                </tbody></table>
+              </td>
+            </tr>
+            <!-- end header -->
+    
+            <!-- body -->
+            <tr>
+              <td>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="max-width: 640px;width: 100%; margin-top: -265px; background-color: #FFFFFF; padding: 39px 63px 33px 33px;" class="mobile-padding">
+                  <!-- content -->
+                  <tbody><tr>
+                    <td style="padding: 0px 0 16px 0;">
+                      <table border="0" cellspacing="0" cellpadding="0" role="presentation">
+                        <!-- title -->
+                        <tbody><tr>
+                          <td style="width: 100%;  font-family: Arial, sans-serif;">
+                            <h1 style="margin: 0; color: #333333; line-height: 1.3; font-size: 16px; font-weight: 700; padding-bottom: 5px;">
+                                {shipping_firstname}, дякуємо за ваше замовлення!
+                            </h1>
+                          </td>
+                        </tr>
+                        <!-- end title -->
+                        <!-- paragraph -->
+                        <tr>
+                          <td style="padding: 0 0 10px 0;">
+                            <p style="margin: 0; font-size: 14px; font-weight: 400; line-height: 1.4; color:#333333;">
+                                Ваша заявка № {order_id} прийнята. Ми надішлемо інформаційне повідомлення у Viber чи Telegram. Ви можете відстежити статус свого замовлення в:                             <a href="https://rostriks.ua/ua/my-account/" style="margin: 0; font-size: 16px; font-weight: 400; line-height: 1.4; color:#3e77aa;">
+                                    Особистому кабінеті
+                                </a>
+                            </p>
+                          </td>
+                        </tr>
+                        <!-- end paragraph -->
+    
+                        <!-- title -->
+                        <tr>
+                          <td style="padding: 0 0 28px 0; text-align: center;">
+                            <h2 style="font-weight: 400;font-size: 24px; color: #333333; line-height: 1.3; margin: 0;">
+                              Статус замовлення
+                            </h2>
+                          </td>
+                        </tr>
+                        <!-- end title -->
+    
+                        <!-- image -->
+                        <tr>
+                          <td style="padding: 0 0 17px 0;">
+                            <a href="https://rostriks.ua/ua/my-account/">
+                              <img src="https://b2b.rostriks.ua/imghost/status/status-3.jpg" alt="mega image" border="0" width="100%" style="border-radius: 3px;">
+                            </a>
+                          </td>
+                        </tr>
+                        <!-- end image -->
+    
+                        <!-- title -->
+                        <tr>
+                          <td style="padding: 0 0 17px 0;">
+                            <h2 style="font-weight: 400;font-size: 17px; color: #49d598; line-height: 1.6; color: #49d598; margin: 0;">
+                              Інформація про замовлення:
+                            </h2>
+                          </td>
+                        </tr>
+                        <!-- end title -->
+    
+                        <!-- paragraph -->
+                        <tr>
+                          <td style="padding: 0 0 18px 0;">
+                            <table cellspacing="0" style="border-collapse:collapse;border-left:1px solid #414141;border-top:1px solid #414141;margin-bottom:10px;width:100%;">
+                                <tbody>
+                                    <tr>
+                                        <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">
+                                            <strong>Замовлення №:</strong> {order_id}<br><strong>Дата додавання:</strong>
+                                            {date_added}<br><strong>Спосіб оплати:</strong> {payment_method}<br><strong>Спосіб
+                                                доставки:</strong> {shipping_method}</td>
+                                        <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">
+                                            <strong>E-mail:</strong> {email}<br><strong>Телефон:</strong> {telephone}<br><strong>IP
+                                                адреса:</strong> {ip}<br><strong>Статус замовлення:</strong> {order_status}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <!-- end paragraph -->
+    
+                        <!-- title -->
+                        <tr>
+                          <td style="padding: 0 0 17px 0;">
+                            <h2 style="font-weight: 400;font-size: 17px; color: #49d598; line-height: 1.6; color: #49d598; margin: 0;">
+                              Ваш коментар:
+                            </h2>
+                          </td>
+                        </tr>
+                        <!-- end title -->
+    
+                        <!-- paragraph -->
+                        <tr>
+                          <td style="padding: 0 0 28px 0;">
+                            <table cellspacing="0" style="border-collapse:collapse;border-left:1px solid #414141;border-top:1px solid #414141;margin-bottom:20px;width:100%">
+                                <tbody>
+                                    <tr>
+                                        <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">{comment}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <!-- end paragraph -->
+    
+                        <!-- image -->
+                        <tr>
+                            <td style="padding: 0 0 17px 0;">
+                              <h2 style="font-weight: 400;font-size: 17px; color: #49d598; line-height: 1.6; color: #49d598; margin: 0;">
+                                Інформація про доставку:
+                              </h2>
+                            </td>
+                          </tr>
+
+                        <tr>
+                          <td style="padding: 0 0 17px 0;">
+                            <table cellspacing="0" style="border-collapse:collapse;border-left:1px solid #414141;border-top:1px solid #414141;margin-bottom:20px;width:100%">
+                                <tbody>
+                                    <tr>
+                                        
+                                        <td style="border-bottom:1px solid #414141;border-right:1px solid #414141;text-align:left">
+                                            {shipping_country}<br>{shipping_zone}<br>{shipping_city}<br>{shipping_postcode},
+                                            {shipping_address_1}<br>{shipping_address_2}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+<!--                             <a href="">
+                              <img src="https://pavlokrovitskyi.github.io/images/letter-image-mega/image-3.png" alt="image" border="0" width="100%" style="border-radius: 3px;">
+                            </a> -->
+                          </td>
+                        </tr>
+                        <!-- end image -->
+
+
+    
+                        <!-- title -->
+                        <tr>
+                          <td style="padding: 0 0 17px 0;">
+                            <h2 style="font-weight: 400;font-size: 17px; color: #49d598; line-height: 1.6; color: #49d598; margin: 0;">
+                                Виникли додаткові запитання?
+                            </h2>
+                          </td>
+                        </tr>
+                        <!-- end title -->
+    
+                        <!-- paragraph -->
+                        <tr>
+                          <td style="background-color: #f1c94f; height: 50px; border-radius: 8px;">
+                            <p style="margin: 0; font-size: 16px; font-weight: 400; line-height: 1.3; color:#333333; padding: 20px">
+                                Звертайтеся до нашого: <a href="viber://chat?number=+380631092225">СУПЕР-МЕНЕДЖЕРА</a>
+                            </p>
+                          </td>
+                        </tr>
+                        <!-- end paragraph -->
+    
+                      </tbody></table>
+                    </td>
+                  </tr>
+                  <!-- end content -->
+                </tbody></table>
+              </td>
+            </tr>
+            <!-- end body -->
+    
+    
+            <!-- Footer -->
+            <tr>
+              <td style="padding: 47px 0 0 0; ">
+                <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%; background-color: #EEEEEE;">
+    
+                  <tbody><tr>
+                    <td>
+                      <!-- top row -->
+                  </td></tr><tr>
+                    <td>
+                      <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%; background-color: #414141; color: #FFFFFF; padding: 41px 10px 43px 10px;">
+    
+                        <!-- paragraph -->
+                        <tbody><tr>
+                          <td style="padding: 0 0 15px 0;text-align: center;">
+                            <p style="margin: 0;font-weight: 400;font-size: 20px;line-height: 25px;text-align: center;color: #FFFFFF;">
+                              Допоможіть нам стати краще
+                            </p>
+                          </td>
+                        </tr>
+                        <!-- end paragraph -->
+    
+                        <!-- button -->
+                        <tr>
+                          <td>
+                            <table border="0" cellspacing="0" cellpadding="0" role="presentation" class="center" align="center" style="width: 100%; max-width: 213px; text-align: center;">
+                              <tbody><tr>
+                                <td style="background-color: #1aaf6e !important; border-radius: 3px; font-weight: 400; line-height: 1.25; height: 20px;">
+                                  <a href="https://www.google.com/search?q=%D1%80%D0%BE%D1%81%D1%82%D1%80%D1%96%D0%BA%D1%81+%D1%83%D0%B6%D0%B3%D0%BE%D1%80%D0%BE%D0%B4&oq=%D1%80%D0%BE%D1%81%D1%82%D1%80%D1%96%D0%BA%D1%81+%D1%83%D0%B6&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigAdIBCDUwNzVqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8#lrd=0x473919000d4e1d7f:0xd14840e00e635dd1,3,,,," target="_blank" rel="noopener noreferrer" style="color: #FFF;  text-decoration: none; display: block; padding: 5px 5px;">
+                                    <p>Лишити відгук</p></a>
+                                </td>
+                              </tr>
+                            </tbody></table>
+                          </td>
+                        </tr>
+                        <!-- end button -->
+    
+                      </tbody></table>
+                    </td>
+                  </tr>
+                  <!-- end top row -->
+    
+                  <!-- bottom row -->
+                  <tr>
+                    <td style="padding: 6px 0 8px 0; background-color: #FFFFFF;">
+    
+                      <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%; background-color: #FFFFFF;">
+    
+                        <tbody><tr>
+                          <td style="padding: 0 0 15px 0;text-align: center;">
+                            <p style="margin: 0;font-weight: 400;font-size: 14px;line-height: 20px;text-align: center;color: #414141;">
+                              Наші соціальні мережі
+                            </p>
+                          </td>
+                        </tr>
+    
+                        <tr>
+                          <td align="center" style="padding: 0 24px 0 24px;font-size: 0;" class="fourth-columns mobile-padding">
+                            <table border="0" cellspacing="0" cellpadding="0" role="presentation" style="vertical-align: middle;width: 100%;max-width:38px;display: inline-block;" class="column">
+                              <tbody><tr>
+                                <td style="padding: 4px 4px 4px 4px;">
+                                  <table border="0" cellspacing="0" cellpadding="0" role="presentation">
+                                    <tbody><tr>
+                                      <td>
+                                        <a href="viber://chat?number=+380631092225" target="_blank">
+                                          <img src="https://b2b.rostriks.ua/image/cache/catalog/icon/icon-viber-100x100.png" alt="viber" border="0" width="24" style="max-width: 24px;">
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </tbody></table>
+                                </td>
+                              </tr>
+                            </tbody></table>
+                            <table border="0" cellspacing="0" cellpadding="0" role="presentation" style="vertical-align: middle;width: 100%;max-width:38px;display: inline-block;" class="column">
+                              <tbody><tr>
+                                <td style="padding: 4px 4px 4px 4px;">
+                                  <table border="0" cellspacing="0" cellpadding="0" role="presentation">
+                                    <tbody><tr>
+                                      <td>
+                                        <a href="https://t.me/rostriks" target="_blank">
+                                          <img src="https://b2b.rostriks.ua/image/cache/catalog/icon/icons-telegram--100x100.png" alt="Facebook" border="0" width="24" style="max-width: 24px;">
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </tbody></table>
+                                </td>
+                              </tr>
+                            </tbody></table>
+                            <table border="0" cellspacing="0" cellpadding="0" role="presentation" style="vertical-align: middle;width: 100%;max-width:38px;display: inline-block;" class="column">
+                              <tbody><tr>
+                                <td style="padding: 4px 4px 4px 4px;">
+                                  <table border="0" cellspacing="0" cellpadding="0" role="presentation">
+                                    <tbody><tr>
+                                      <td>
+                                        <a href="https://www.instagram.com/rostriks.ua" target="_blank">
+                                          <img src="https://b2b.rostriks.ua/image/cache/catalog/icon/icon-instagram--100x100.png" alt="Facebook" border="0" width="24" style="max-width: 24px;">
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </tbody></table>
+                                </td>
+                              </tr>
+                            </tbody></table>
+                          </td>
+                        </tr>
+                      </tbody></table>
+    
+                    </td>
+                  </tr>
+                  <!-- end bottom row -->
+              
+            
+    
+          </tbody></table>
+          </td>
+    
+          </tr>
+          <!-- End Footer -->
+    
+          </tbody></table>
+    </center>
 </body>
-
-
 </html>
